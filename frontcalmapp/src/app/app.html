@@ -1,0 +1,16 @@
+<mat-toolbar class="custom-toolbar" *ngIf="verificar()">
+  <div class="nav-vertical">
+    <div class="user-info">
+      <mat-icon class="user-icon">person</mat-icon>
+      <span>{{username}}</span>
+    </div>
+
+    <button mat-button class="custom-button" [routerLink]="['/home']">Home</button>
+    <button mat-button class="custom-button" routerLink="/profile">Perfil</button>
+    <button mat-button class="custom-button" routerLink="/test">Test psicológico</button>
+    <button mat-button class="custom-button" routerLink="/recommendations">Recomendaciones</button>
+    <button mat-button class="custom-button" routerLink="/reports">Reportes</button>
+    <button mat-button class="custom-button" (click)="eliminar()">Salir</button>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

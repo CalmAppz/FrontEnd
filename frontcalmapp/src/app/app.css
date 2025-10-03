@@ -1,0 +1,43 @@
+.custom-toolbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #1a1a1a;
+}
+
+.nav-vertical {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.nav-vertical button {
+  margin: 10px 0;
+  color: white;
+  width: 100%;
+  text-align: left;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-icon {
+  margin-right: 10px;
+}
+
+.custom-button {
+  font-size: 14px;
+}
+
+.custom-toolbar mat-icon {
+  color: white;
+}
+
+.custom-button:hover {
+  background-color: #333;
+}
