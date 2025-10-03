@@ -24,7 +24,7 @@ export class App implements OnInit {
   protected readonly title = signal('frontcalmapp');
   role: string = '';
   username: string = '';
-
+  nombresapellidos: string = '';
   constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {}
@@ -32,6 +32,7 @@ export class App implements OnInit {
   verificar() {
     this.role = this.loginService.showRole();
     this.username = this.loginService.showUsername();
+     this.nombresapellidos = this.loginService.showFullName();
     return this.loginService.verificar();
   }
 

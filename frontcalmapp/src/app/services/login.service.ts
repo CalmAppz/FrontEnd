@@ -62,4 +62,20 @@ export class LoginService {
     const decodedToken = helper.decodeToken(token);
     
     return decodedToken?.sub;
-  }};
+  }
+// Método para obtener el "nombresapellidos" desde el token
+  showFullName() {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+    const token = sessionStorage.getItem('token');
+    if (!token) {
+      return null;
+    }
+    const helper = new JwtHelperService();
+    const decodedToken = helper.decodeToken(token);
+    return decodedToken?.nombresapellidos;  // Asegúrate que el token contiene el parámetro "nombresapellidos"
+  }
+
+
+};
