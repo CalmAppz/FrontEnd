@@ -1,0 +1,47 @@
+<div class="containertest">
+  <h1>Cuestionarios de Ansiedad y Estrés</h1>
+  
+  <!-- Cuestionario de Ansiedad -->
+  <div class="quiz-section">
+    <h2>Cuestionario para medir la Ansiedad</h2>
+    <form (ngSubmit)="calcularResultado('ansiedad')" #ansiedadForm="ngForm">
+      <div *ngFor="let pregunta of preguntasAnsiedad; let i = index" class="question">
+        <label>{{pregunta.texto}}</label>
+        <select [(ngModel)]="respuestasAnsiedad[i]" name="ansiedad{{i}}" required>
+          <option value="0">No probable</option>
+          <option value="1">Poco probable</option>
+          <option value="2">Moderadamente probable</option>
+          <option value="3">Probable</option>
+          <option value="4">Muy probable</option>
+          <option value="5">Extremadamente probable</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Obtener Resultado Ansiedad</button>
+      <div *ngIf="resultadoAnsiedad">
+        <h3>Resultado de Ansiedad: {{resultadoAnsiedad}}</h3>
+      </div>
+    </form>
+  </div>
+
+  <!-- Cuestionario de Estrés -->
+  <div class="quiz-section">
+    <h2>Cuestionario para medir el Estrés</h2>
+    <form (ngSubmit)="calcularResultado('estres')" #estresForm="ngForm">
+      <div *ngFor="let pregunta of preguntasEstres; let i = index" class="question">
+        <label>{{pregunta.texto}}</label>
+        <select [(ngModel)]="respuestasEstres[i]" name="estres{{i}}" required>
+          <option value="0">No probable</option>
+          <option value="1">Poco probable</option>
+          <option value="2">Moderadamente probable</option>
+          <option value="3">Probable</option>
+          <option value="4">Muy probable</option>
+          <option value="5">Extremadamente probable</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Obtener Resultado Estrés</button>
+      <div *ngIf="resultadoEstres">
+        <h3>Resultado de Estrés: {{resultadoEstres}}</h3>
+      </div>
+    </form>
+  </div>
+</div>

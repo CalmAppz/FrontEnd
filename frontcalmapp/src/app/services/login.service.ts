@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { JwtRequest } from '../models/JwtRequest';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -61,7 +62,4 @@ export class LoginService {
     const decodedToken = helper.decodeToken(token);
     
     return decodedToken?.sub;
-  }
-
-  
-}
+  }};

@@ -1,50 +1,151 @@
 <div class="page">
-  <h1 class="page-title">Inicio</h1>
+    <h1 class="page-title">CalmApp</h1>
+    <main class="card">
+        <!-- NAV SUPERIOR -->
+        <nav class="top-nav">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+            <a class="nav-link" href="#beneficios">Beneficios</a>
+            <a class="nav-link" href="#testimonios">Testimonios</a>
+            <a class="nav-link" href="#contacto">Contáctanos</a>
+            <div class="auth-actions">
+                <a class="btn small ghost" routerLink="/login" aria-label="Ir a Login">Iniciar Sesión</a>
+                <a class="btn small primary" routerLink="/signup" aria-label="Ir a Sign up">Registrate</a>
+            </div>
+        </nav>
 
-  <main class="card">
-    <!-- NAV SUPERIOR -->
-    <nav class="top-nav">
-      <a class="nav-link active" routerLink="/home">Inicio</a>
-      <a class="nav-link" routerLink="/about">Nosotros</a>
-      <a class="nav-link" routerLink="/contact">Contáctanos</a>
-      <a class="nav-link right" routerLink="/login">Login/Sign up</a>
-    </nav>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Bienestar emocional para estudiantes</h2>
+                    <p>Evalúa tu estado, recibe recomendaciones basadas en evidencia y sigue tu progreso con reportes claros y privados.</p>
+                    <div class="cta-row">
+                        <a class="btn primary" routerLink="/login" aria-label="Comenzar ahora">Comenzar ahora</a>
+                        <a class="btn ghost" href="#nosotros" aria-label="Saber más">Saber más</a>
+                    </div>
+                    <ul class="bullets">
+                        <li>Cuestionarios validados (ansiedad/estrés)</li>
+                        <li>Recomendaciones personalizadas</li>
+                        <li>Privacidad y seguridad de datos</li>
+                    </ul>
+                </div>
+                <div class="hero-media">
+                    <!-- Imagen principal -->
+                    <img src="/assets/hero-calmapp.jpg" alt="Estudiante usando CalmApp" loading="eager" />
+                    
+                </div>
+            </div>
+        </section>
 
-    <!-- HERO / CONTENIDO -->
-    <section class="hero">
-      <div class="hero-text">
-        <h2>Bienvenido a CalmApp</h2>
-        <p>
-          Plataforma para el bienestar emocional de estudiantes. Evalúa tu estado,
-          recibe recomendaciones personalizadas y haz seguimiento a tu progreso.
-        </p>
+        <!-- NOSOTROS -->
+        <section id="nosotros" class="about section">
+            <div class="section-head">
+                <h2>Acerca de nosotros</h2>
+                <p>Un equipo multidisciplinario comprometido con el bienestar estudiantil.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>En <strong>CalmApp</strong> combinamos psicología, diseño y tecnología para acercar herramientas de salud mental a estudiantes de colegios y universidades.</p>
+                    <p>Trabajamos con instrumentos de tamizaje validados y prácticas de UX accesible para que cualquier estudiante pueda evaluar su estado y encontrar pasos claros para sentirse mejor.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="num">+5k</span>
+                            <span class="label">evaluaciones</span>
+                        </div>
+                        <div class="stat">
+                            <span class="num">92%</span>
+                            <span class="label">satisfacción</span>
+                        </div>
+                        <div class="stat">
+                            <span class="num">24/7</span>
+                            <span class="label">disponible</span>
+                        </div>
+                    </div>
+                </div>
+                <figure class="about-figure">
+                    <img src="/assets/about-team.jpg" alt="Equipo de CalmApp" loading="lazy">
+                    <figcaption>Nuestro equipo en sesión de co-diseño</figcaption>
+                </figure>
+            </div>
+        </section>
 
-        <div class="cta-row">
-          <a class="btn primary" routerLink="/login">Comenzar ahora</a>
-          <a class="btn ghost" routerLink="/about">Saber más</a>
-        </div>
-      </div>
+        <!-- BENEFICIOS / FEATURES -->
+        <section id="beneficios" class="features section">
+            <div class="section-head">
+                <h2>Beneficios clave</h2>
+                <p>Lo esencial para acompañarte en tu día a día.</p>
+            </div>
+            <div class="features-grid">
+                <article class="feature">
+                    <img src="/assets/feat-assessment.jpg" alt="Evaluaciones rápidas" loading="lazy">
+                    <h3>Evaluaciones rápidas</h3>
+                    <p>Cuestionarios breves con resultados inmediatos y lenguaje simple.</p>
+                </article>
+                <article class="feature">
+                    <img src="/assets/feat-reco.jpg" alt="Recomendaciones personalizadas" loading="lazy">
+                    <h3>Recomendaciones personalizadas</h3>
+                    <p>Rutinas y tips basados en tu resultado y tu contexto.</p>
+                </article>
+                <article class="feature">
+                    <img src="/assets/feat-report.jpg" alt="Reportes y seguimiento" loading="lazy">
+                    <h3>Reportes y seguimiento</h3>
+                    <p>Visualiza tu evolución y detecta patrones para anticiparte.</p>
+                </article>
+            </div>
+        </section>
 
-      <div class="hero-art">
-        <!-- placeholder de imagen/ilustración -->
-        <div class="placeholder">Imagen</div>
-      </div>
-    </section>
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="testimonials section">
+            <div class="section-head">
+                <h2>Lo que dicen nuestros usuarios</h2>
+            </div>
+            <div class="testi-grid">
+                <blockquote class="testi">
+                    <p>“Me ayudó a identificar señales de estrés y organizar mi semana.”</p>
+                    <footer>— Camila, 17</footer>
+                </blockquote>
+                <blockquote class="testi">
+                    <p>“Las recomendaciones son prácticas. Me siento más tranquila.”</p>
+                    <footer>— Joel, 20</footer>
+                </blockquote>
+                <blockquote class="testi">
+                    <p>“El reporte me permitió ver avances que antes no notaba.”</p>
+                    <footer>— Ana, 19</footer>
+                </blockquote>
+            </div>
+        </section>
 
-    <!-- FEATURES (opcionales, se ven vacíos si no los usas) -->
-    <section class="features">
-      <div class="feature">
-        <h3>Test Psicológico</h3>
-        <p>Cuestionarios validados para detección temprana.</p>
-      </div>
-      <div class="feature">
-        <h3>Recomendaciones</h3>
-        <p>Consejos y actividades según tu resultado.</p>
-      </div>
-      <div class="feature">
-        <h3>Reportes</h3>
-        <p>Visualiza tu evolución y métricas clave.</p>
-      </div>
-    </section>
-  </main>
+        <!-- CONTACTO -->
+        <section id="contacto" class="contact section">
+            <div class="section-head">
+                <h2>Contáctanos</h2>
+                <p>¿Preguntas, sugerencias o alianzas? Escríbenos.</p>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form" (submit)="$event.preventDefault()">
+                    <input type="text" placeholder="Nombre completo" aria-label="Nombre completo" required />
+                    <input type="email" placeholder="Correo electrónico" aria-label="Correo electrónico" required />
+                    <textarea rows="5" placeholder="Escribe tu mensaje..." aria-label="Mensaje" required></textarea>
+                    <button class="btn primary" type="submit">Enviar mensaje</button>
+                </form>
+                <aside class="contact-aside">
+                    <div class="contact-card">
+                        <img src="/assets/contact-illustration.jpg" alt="Ilustración de contacto" loading="lazy">
+                        <ul>
+                            <li><strong>Email:</strong> contacto@calmapp.pe</li>
+                            <li><strong>Soporte:</strong> soporte@calmapp.pe</li>
+                            <li><strong>Horario:</strong> L–V 9:00–18:00</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-final">
+            <h3>Empieza hoy. Tu bienestar importa.</h3>
+            <a class="btn primary" routerLink="/login">Crear cuenta</a>
+        </section>
+    </main>
 </div>

@@ -1,0 +1,122 @@
+/* General Styles for the Container */
+.container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    color: #333;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-left: 250px; /* Desplazamos el contenido a la derecha, dejando espacio para el navbar */
+    line-height: 1.6;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    color: #3949ab; /* Azul calmante */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Recommendations Section */
+.recommendations {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.recommendations h2 {
+    font-size: 2rem;
+    color: #3949ab;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* List of Recommendations */
+.recommendations ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.recommendations li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.recommendations li strong {
+    color: #3949ab;
+    font-weight: bold;
+}
+
+.recommendations li::before {
+    content: "✔️"; /* Adding a checkmark icon before each recommendation */
+    margin-right: 10px;
+    color: #5c6bc0; /* Matching the theme */
+}
+
+/* Additional Info Section */
+.additional-info {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.additional-info h3 {
+    font-size: 1.8rem;
+    color: #3949ab;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.additional-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.additional-info li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.additional-info li strong {
+    color: #3949ab;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin-left: 0; /* Eliminamos el margen izquierdo en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .recommendations h2,
+    .additional-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .recommendations li,
+    .additional-info li {
+        font-size: 1rem;
+    }
+}

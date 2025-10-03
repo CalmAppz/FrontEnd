@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -7,19 +7,19 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { JwtRequest } from '../../models/JwtRequest';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, MatFormFieldModule , MatButtonModule, MatInputModule,RouterLink],
+  imports: [FormsModule, MatFormFieldModule , MatButtonModule, MatInputModule,RouterLink, ReactiveFormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
-export class Login implements OnInit{
-  constructor(
+export class Login implements OnInit {
+ constructor(
     private loginService: LoginService,
     private router: Router,
-    public route: ActivatedRoute
+    private formBuilder: FormBuilder
   ) {}
 
   username: string = '';
@@ -51,20 +51,20 @@ export class Login implements OnInit{
         console.warn('No se encontró el ID en el token');
       }
         // Alerta de éxito con SweetAlert2
-        swal.fire({
+        Swal.fire({
           icon: 'success',
           title: 'Login exitoso',
           text: 'Bienvenido al sistema',
           confirmButtonColor: '#57614F', // Puedes usar tus colores personalizados
         }).then(() => {
-          this.router.navigate(['home']);
+          this.router.navigate(['lobby']);
         });
       },
       (error) => {
         this.mensaje = 'Credenciales incorrectas!!!';
 
         // Alerta de error con SweetAlert2
-        swal.fire({
+        Swal.fire({
           icon: 'error',
           title: 'Error de autenticación',
           text: this.mensaje,
